@@ -62,7 +62,7 @@
     </label>
 
     <!-- Input for opponent_team_id start -->
-    <input type="text" id="opponent_team_id" name="opponent_team_id" class="form-control" value="<%= @game.opponent_team_id %>">
+    <%= select_tag(:opponent_team_id, options_from_collection_for_select(OpponentTeam.all, :id, :created_at, @game.opponent_team_id), :class => "form-control") %>
     <!-- Input for opponent_team_id end -->
   </div>
   <!-- Label and input for opponent_team_id end -->
