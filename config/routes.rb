@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Fan team resource:
+
+  # CREATE
+  get("/fan_teams/new", { :controller => "fan_teams", :action => "new_form" })
+  post("/create_fan_team", { :controller => "fan_teams", :action => "create_row" })
+
+  # READ
+  get("/fan_teams", { :controller => "fan_teams", :action => "index" })
+  get("/fan_teams/:id_to_display", { :controller => "fan_teams", :action => "show" })
+
+  # UPDATE
+  get("/fan_teams/:prefill_with_id/edit", { :controller => "fan_teams", :action => "edit_form" })
+  post("/update_fan_team/:id_to_modify", { :controller => "fan_teams", :action => "update_row" })
+
+  # DELETE
+  get("/delete_fan_team/:id_to_remove", { :controller => "fan_teams", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Team resource:
 
   # CREATE

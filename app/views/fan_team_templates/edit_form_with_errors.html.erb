@@ -1,0 +1,53 @@
+<!-- Validation failure messages -->
+<% if @fan_team.errors.any? %>
+  <% @fan_team.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit fan team #<%= @fan_team.id %>
+</h1>
+
+<hr>
+
+<!-- Form fan_team start -->
+<form action="/update_fan_team/<%= @fan_team.id %>" method="post">
+<!-- Form fan_team end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @fan_team.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for team_id start -->
+  <div class="form-group">
+    <label for="team_id">
+      Team
+    </label>
+
+    <!-- Input for team_id start -->
+    <input type="text" id="team_id" name="team_id" class="form-control" value="<%= @fan_team.team_id %>">
+    <!-- Input for team_id end -->
+  </div>
+  <!-- Label and input for team_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update fan team
+  </button>
+</form>
+
+<hr>
+
+<a href="/fan_teams">
+  Go back
+</a>

@@ -1,0 +1,73 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Fan team #<%= @fan_team.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/fan_teams" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link fan_team start -->
+      <div class="col">
+        <a href="/fan_teams/<%= @fan_team.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit fan team
+        </a>
+      </div>
+      <!-- Edit link fan_team end -->
+
+      <!-- Delete link fan_team start -->
+      <div class="col">
+        <a href="/delete_fan_team/<%= @fan_team.id %>" class="btn btn-block btn-outline-secondary">
+          Delete fan team
+        </a>
+      </div>
+      <!-- Delete link fan_team end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @fan_team.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Team
+      </dt>
+      <!-- Display team_id start -->
+      <dd>
+        <%= @fan_team.team_id %>
+      </dd>
+      <!-- Display team_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@fan_team.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@fan_team.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
