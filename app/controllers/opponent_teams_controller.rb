@@ -1,6 +1,7 @@
 class OpponentTeamsController < ApplicationController
   def index
-    @opponent_teams = OpponentTeam.page(params[:page]).per(10)
+    @q = OpponentTeam.ransack(params[:q])
+    @opponent_teams = @q.result(:distinct => true).includes(:games).page(params[:page]).per(10)
 
     render("opponent_team_templates/index.html.erb")
   end

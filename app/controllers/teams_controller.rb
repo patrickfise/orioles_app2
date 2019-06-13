@@ -1,6 +1,7 @@
 class TeamsController < ApplicationController
   def index
-    @teams = Team.page(params[:page]).per(10)
+    @q = Team.ransack(params[:q])
+    @teams = @q.result(:distinct => true).includes(:fan_teams).page(params[:page]).per(10)
 
     render("team_templates/index.html.erb")
   end
