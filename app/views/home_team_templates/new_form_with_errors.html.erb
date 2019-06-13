@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @home_team.present? %>
   <% if @home_team.errors.any? %>
     <% @home_team.errors.full_messages.each do |message| %>
@@ -16,21 +15,15 @@
 
 <hr>
 
-<!-- Form home_team start -->
 <form action="/create_home_team" method="post">
-<!-- Form home_team end -->
 
-  <!-- Label and input for home_name start -->
   <div class="form-group">
     <label for="home_name">
       Home name
     </label>
 
-    <!-- Input for home_name start -->
     <input type="text" id="home_name" name="home_name" class="form-control" value="<%= @home_team.home_name %>">
-    <!-- Input for home_name end -->
   </div>
-  <!-- Label and input for home_name end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create home team

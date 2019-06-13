@@ -11,53 +11,41 @@
         </a>
       </div>
 
-      <!-- Edit link home_team start -->
       <div class="col">
         <a href="/home_teams/<%= @home_team.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit home team
         </a>
       </div>
-      <!-- Edit link home_team end -->
 
-      <!-- Delete link home_team start -->
       <div class="col">
         <a href="/delete_home_team/<%= @home_team.id %>" class="btn btn-block btn-outline-secondary">
           Delete home team
         </a>
       </div>
-      <!-- Delete link home_team end -->
     </div>
 
     <dl>
       <dt>
         Home name
       </dt>
-      <!-- Display home_name start -->
       <dd>
         <%= @home_team.home_name %>
       </dd>
-      <!-- Display home_name end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@home_team.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@home_team.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

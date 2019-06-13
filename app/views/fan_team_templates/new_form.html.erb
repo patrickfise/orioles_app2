@@ -5,33 +5,23 @@
 
 <hr>
 
-<!-- Form fan_team start -->
 <form action="/create_fan_team" method="post">
-<!-- Form fan_team end -->
 
-  <!-- Label and input for user_id start -->
   <div class="form-group">
     <label for="user_id">
       User
     </label>
 
-    <!-- Input for user_id start -->
     <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :created_at, @fan_team.user_id), :class => "form-control") %>
-    <!-- Input for user_id end -->
   </div>
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for team_id start -->
   <div class="form-group">
     <label for="team_id">
       Team
     </label>
 
-    <!-- Input for team_id start -->
     <%= select_tag(:team_id, options_from_collection_for_select(Team.all, :id, :created_at, @fan_team.team_id), :class => "form-control") %>
-    <!-- Input for team_id end -->
   </div>
-  <!-- Label and input for team_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create fan team

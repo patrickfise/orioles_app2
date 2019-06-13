@@ -11,49 +11,39 @@
         </a>
       </div>
 
-      <!-- Edit link opponent_team start -->
       <div class="col">
         <a href="/opponent_teams/<%= @opponent_team.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit opponent team
         </a>
       </div>
-      <!-- Edit link opponent_team end -->
 
-      <!-- Delete link opponent_team start -->
       <div class="col">
         <a href="/delete_opponent_team/<%= @opponent_team.id %>" class="btn btn-block btn-outline-secondary">
           Delete opponent team
         </a>
       </div>
-      <!-- Delete link opponent_team end -->
     </div>
 
     <dl>
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@opponent_team.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@opponent_team.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "opponent_team_templates/opponent_team_games" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

@@ -1,23 +1,14 @@
-<!-- Form fan_team start -->
 <form action="/create_fan_team_from_team" method="post">
-<!-- Form fan_team end -->
 
-  <!-- Label and input for user_id start -->
   <div class="form-group">
     <label for="user_id">
       User
     </label>
 
-    <!-- Input for user_id start -->
     <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :created_at, @fan_team.user_id), :class => "form-control") %>
-    <!-- Input for user_id end -->
   </div>
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for team_id start -->
-  <!-- Input for team_id start -->
   <input type="hidden" name="team_id" value="<%= @team.id %>">
-  <!-- Input for team_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create fan team
