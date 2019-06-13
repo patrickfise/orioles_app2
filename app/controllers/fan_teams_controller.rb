@@ -1,6 +1,6 @@
 class FanTeamsController < ApplicationController
   def index
-    @fan_teams = FanTeam.all
+    @fan_teams = FanTeam.page(params[:page]).per(10)
 
     render("fan_team_templates/index.html.erb")
   end

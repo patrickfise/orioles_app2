@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
   def index
-    @teams = Team.all
+    @teams = Team.page(params[:page]).per(10)
 
     render("team_templates/index.html.erb")
   end

@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all
+    @games = Game.page(params[:page]).per(10)
 
     render("game_templates/index.html.erb")
   end

@@ -1,6 +1,6 @@
 class HomeTeamsController < ApplicationController
   def index
-    @home_teams = HomeTeam.all
+    @home_teams = HomeTeam.page(params[:page]).per(10)
 
     render("home_team_templates/index.html.erb")
   end
