@@ -36,7 +36,7 @@
     </label>
 
     <!-- Input for team_id start -->
-    <input type="text" id="team_id" name="team_id" class="form-control" value="<%= @fan_team.team_id %>">
+    <%= select_tag(:team_id, options_from_collection_for_select(Team.all, :id, :created_at, @fan_team.team_id), :class => "form-control") %>
     <!-- Input for team_id end -->
   </div>
   <!-- Label and input for team_id end -->
