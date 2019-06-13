@@ -1,0 +1,41 @@
+<!-- Validation failure messages -->
+<% if @home_team.errors.any? %>
+  <% @home_team.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit home team #<%= @home_team.id %>
+</h1>
+
+<hr>
+
+<!-- Form home_team start -->
+<form action="/update_home_team/<%= @home_team.id %>" method="post">
+<!-- Form home_team end -->
+
+  <!-- Label and input for home_name start -->
+  <div class="form-group">
+    <label for="home_name">
+      Home name
+    </label>
+
+    <!-- Input for home_name start -->
+    <input type="text" id="home_name" name="home_name" class="form-control" value="<%= @home_team.home_name %>">
+    <!-- Input for home_name end -->
+  </div>
+  <!-- Label and input for home_name end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update home team
+  </button>
+</form>
+
+<hr>
+
+<a href="/home_teams">
+  Go back
+</a>
