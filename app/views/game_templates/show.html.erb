@@ -1,0 +1,109 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Game #<%= @game.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/games" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link game start -->
+      <div class="col">
+        <a href="/games/<%= @game.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit game
+        </a>
+      </div>
+      <!-- Edit link game end -->
+
+      <!-- Delete link game start -->
+      <div class="col">
+        <a href="/delete_game/<%= @game.id %>" class="btn btn-block btn-outline-secondary">
+          Delete game
+        </a>
+      </div>
+      <!-- Delete link game end -->
+    </div>
+
+    <dl>
+      <dt>
+        Home name
+      </dt>
+      <!-- Display home_name start -->
+      <dd>
+        <%= @game.home_name %>
+      </dd>
+      <!-- Display home_name end -->
+
+      <dt>
+        Away name
+      </dt>
+      <!-- Display away_name start -->
+      <dd>
+        <%= @game.away_name %>
+      </dd>
+      <!-- Display away_name end -->
+
+      <dt>
+        Time
+      </dt>
+      <!-- Display time start -->
+      <dd>
+        <%= @game.time %>
+      </dd>
+      <!-- Display time end -->
+
+      <dt>
+        Date
+      </dt>
+      <!-- Display date start -->
+      <dd>
+        <%= @game.date %>
+      </dd>
+      <!-- Display date end -->
+
+      <dt>
+        Fanteam
+      </dt>
+      <!-- Display fanteam_id start -->
+      <dd>
+        <%= @game.fanteam_id %>
+      </dd>
+      <!-- Display fanteam_id end -->
+
+      <dt>
+        Opponent team
+      </dt>
+      <!-- Display opponent_team_id start -->
+      <dd>
+        <%= @game.opponent_team_id %>
+      </dd>
+      <!-- Display opponent_team_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@game.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@game.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
