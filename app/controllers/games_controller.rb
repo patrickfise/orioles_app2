@@ -61,6 +61,22 @@ class GamesController < ApplicationController
     end
   end
 
+  def destroy_row_from_fanteam
+    @game = Game.find(params.fetch("id_to_remove"))
+
+    @game.destroy
+
+    redirect_to("/fan_teams/#{@game.fanteam_id}", notice: "Game deleted successfully.")
+  end
+
+  def destroy_row_from_opponent_team
+    @game = Game.find(params.fetch("id_to_remove"))
+
+    @game.destroy
+
+    redirect_to("/opponent_teams/#{@game.opponent_team_id}", notice: "Game deleted successfully.")
+  end
+
   def destroy_row
     @game = Game.find(params.fetch("id_to_remove"))
 

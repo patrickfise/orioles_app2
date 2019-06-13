@@ -55,6 +55,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_fan_team/:id_to_remove", { :controller => "fan_teams", :action => "destroy_row" })
+  get("/delete_fan_team_from_user/:id_to_remove", { :controller => "fan_teams", :action => "destroy_row_from_user" })
+  get("/delete_fan_team_from_team/:id_to_remove", { :controller => "fan_teams", :action => "destroy_row_from_team" })
 
   #------------------------------
 
@@ -112,6 +114,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_game/:id_to_remove", { :controller => "games", :action => "destroy_row" })
+  get("/delete_game_from_opponent_team/:id_to_remove", { :controller => "games", :action => "destroy_row_from_opponent_team" })
+  get("/delete_game_from_fanteam/:id_to_remove", { :controller => "games", :action => "destroy_row_from_fanteam" })
 
   #------------------------------
 

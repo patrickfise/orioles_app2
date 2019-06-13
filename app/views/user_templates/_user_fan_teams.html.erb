@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Fan Teams
+
+    <a data-toggle="collapse" href="#user_fan_teams_new_form">
+      Add fan team
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.fan_teams.each do |fan_team| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/fan_teams/<%= fan_team.id %>">
+          <%= fan_team.user_id %>
+        </a>
+        <!-- Show link end -->
+
+        <!-- Delete link start -->
+        <a href="/delete_fan_team_from_user/<%= fan_team.id %>">
+          Delete
+        </a>
+        <!-- Delete link end -->
+
+      </li>
+    <% end %>
+
+    <div class="card-footer">
+      <div class="collapse" id="user_fan_teams_new_form">
+        <!-- New associationcollection form start -->
+
+        <!-- New associationcollection form end -->
+      </div>
+    </div>
+
+  </ul>
+</div>
