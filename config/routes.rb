@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Opponent team resource:
+
+  # CREATE
+  get("/opponent_teams/new", { :controller => "opponent_teams", :action => "new_form" })
+  post("/create_opponent_team", { :controller => "opponent_teams", :action => "create_row" })
+
+  # READ
+  get("/opponent_teams", { :controller => "opponent_teams", :action => "index" })
+  get("/opponent_teams/:id_to_display", { :controller => "opponent_teams", :action => "show" })
+
+  # UPDATE
+  get("/opponent_teams/:prefill_with_id/edit", { :controller => "opponent_teams", :action => "edit_form" })
+  post("/update_opponent_team/:id_to_modify", { :controller => "opponent_teams", :action => "update_row" })
+
+  # DELETE
+  get("/delete_opponent_team/:id_to_remove", { :controller => "opponent_teams", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Fan team resource:
 
   # CREATE

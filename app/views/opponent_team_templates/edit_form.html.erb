@@ -1,0 +1,20 @@
+<h1>
+  Edit opponent team #<%= @opponent_team.id %>
+</h1>
+
+<hr>
+
+<!-- Form opponent_team start -->
+<form action="/update_opponent_team/<%= @opponent_team.id %>" method="post">
+<!-- Form opponent_team end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update opponent team
+  </button>
+</form>
+
+<hr>
+
+<a href="/opponent_teams">
+  Go back
+</a>
