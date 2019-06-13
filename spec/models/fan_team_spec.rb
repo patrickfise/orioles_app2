@@ -4,6 +4,8 @@ RSpec.describe FanTeam, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:games) }
+
     it { should belong_to(:team) }
 
     end
