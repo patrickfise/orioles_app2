@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Team resource:
+
+  # CREATE
+  get("/teams/new", { :controller => "teams", :action => "new_form" })
+  post("/create_team", { :controller => "teams", :action => "create_row" })
+
+  # READ
+  get("/teams", { :controller => "teams", :action => "index" })
+  get("/teams/:id_to_display", { :controller => "teams", :action => "show" })
+
+  # UPDATE
+  get("/teams/:prefill_with_id/edit", { :controller => "teams", :action => "edit_form" })
+  post("/update_team/:id_to_modify", { :controller => "teams", :action => "update_row" })
+
+  # DELETE
+  get("/delete_team/:id_to_remove", { :controller => "teams", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Home team resource:
 
   # CREATE

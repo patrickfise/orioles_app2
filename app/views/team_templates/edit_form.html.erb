@@ -1,0 +1,20 @@
+<h1>
+  Edit team #<%= @team.id %>
+</h1>
+
+<hr>
+
+<!-- Form team start -->
+<form action="/update_team/<%= @team.id %>" method="post">
+<!-- Form team end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update team
+  </button>
+</form>
+
+<hr>
+
+<a href="/teams">
+  Go back
+</a>
