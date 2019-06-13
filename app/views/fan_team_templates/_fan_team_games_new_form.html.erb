@@ -1,0 +1,73 @@
+<!-- Form game start -->
+<form action="/create_game_from_fan_team" method="post">
+<!-- Form game end -->
+
+  <!-- Label and input for home_name start -->
+  <div class="form-group">
+    <label for="home_name">
+      Home name
+    </label>
+
+    <!-- Input for home_name start -->
+    <input type="text" id="home_name" name="home_name" class="form-control" value="<%= @game.home_name %>">
+    <!-- Input for home_name end -->
+  </div>
+  <!-- Label and input for home_name end -->
+
+  <!-- Label and input for away_name start -->
+  <div class="form-group">
+    <label for="away_name">
+      Away name
+    </label>
+
+    <!-- Input for away_name start -->
+    <input type="text" id="away_name" name="away_name" class="form-control" value="<%= @game.away_name %>">
+    <!-- Input for away_name end -->
+  </div>
+  <!-- Label and input for away_name end -->
+
+  <!-- Label and input for time start -->
+  <div class="form-group">
+    <label for="time">
+      Time
+    </label>
+
+    <!-- Input for time start -->
+    <input type="text" id="time" name="time" class="form-control" value="<%= @game.time %>">
+    <!-- Input for time end -->
+  </div>
+  <!-- Label and input for time end -->
+
+  <!-- Label and input for date start -->
+  <div class="form-group">
+    <label for="date">
+      Date
+    </label>
+
+    <!-- Input for date start -->
+    <input type="text" id="date" name="date" class="form-control" value="<%= @game.date %>">
+    <!-- Input for date end -->
+  </div>
+  <!-- Label and input for date end -->
+
+  <!-- Label and input for fanteam_id start -->
+  <!-- Input for fanteam_id start -->
+  <input type="hidden" name="fanteam_id" value="<%= @fan_team.id %>">
+  <!-- Input for fanteam_id end -->
+
+  <!-- Label and input for opponent_team_id start -->
+  <div class="form-group">
+    <label for="opponent_team_id">
+      Opponent team
+    </label>
+
+    <!-- Input for opponent_team_id start -->
+    <input type="text" id="opponent_team_id" name="opponent_team_id" class="form-control" value="<%= @game.opponent_team_id %>">
+    <!-- Input for opponent_team_id end -->
+  </div>
+  <!-- Label and input for opponent_team_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create game
+  </button>
+</form>

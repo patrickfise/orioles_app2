@@ -6,6 +6,7 @@ class OpponentTeamsController < ApplicationController
   end
 
   def show
+    @game = Game.new
     @opponent_team = OpponentTeam.find(params.fetch("id_to_display"))
 
     render("opponent_team_templates/show.html.erb")

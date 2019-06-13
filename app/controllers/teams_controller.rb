@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @fan_team = FanTeam.new
     @team = Team.find(params.fetch("id_to_display"))
 
     render("team_templates/show.html.erb")

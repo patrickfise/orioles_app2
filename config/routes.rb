@@ -44,6 +44,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/fan_teams/new", { :controller => "fan_teams", :action => "new_form" })
   post("/create_fan_team", { :controller => "fan_teams", :action => "create_row" })
+  post("/create_fan_team_from_user", { :controller => "fan_teams", :action => "create_row_from_user" })
+  post("/create_fan_team_from_team", { :controller => "fan_teams", :action => "create_row_from_team" })
 
   # READ
   get("/fan_teams", { :controller => "fan_teams", :action => "index" })
@@ -103,6 +105,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/games/new", { :controller => "games", :action => "new_form" })
   post("/create_game", { :controller => "games", :action => "create_row" })
+  post("/create_game_from_opponent_team", { :controller => "games", :action => "create_row_from_opponent_team" })
+  post("/create_game_from_fan_team", { :controller => "games", :action => "create_row_from_fan_team" })
 
   # READ
   get("/games", { :controller => "games", :action => "index" })
