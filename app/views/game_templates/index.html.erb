@@ -98,13 +98,21 @@
 
         <!-- Display game.fanteam_id start -->
         <td>
-          <%= game.fanteam.user_id %>
+          <% if game.fanteam.present? %>
+            <a href="/fan_teams/<%= game.fanteam.id %>">
+              <%= game.fanteam.user_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display game.fanteam_id end -->
 
         <!-- Display game.opponent_team_id start -->
         <td>
-          <%= game.opponent_team.created_at %>
+          <% if game.opponent_team.present? %>
+            <a href="/opponent_teams/<%= game.opponent_team.id %>">
+              <%= game.opponent_team.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display game.opponent_team_id end -->
 

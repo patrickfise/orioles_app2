@@ -70,7 +70,11 @@
       </dt>
       <!-- Display fanteam_id start -->
       <dd>
-        <%= @game.fanteam_id %>
+        <% if @game.fanteam.present? %>
+          <a href="/fan_teams/<%= @game.fanteam_id %>">
+            <%= @game.fanteam.user_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display fanteam_id end -->
 
@@ -79,7 +83,11 @@
       </dt>
       <!-- Display opponent_team_id start -->
       <dd>
-        <%= @game.opponent_team_id %>
+        <% if @game.opponent_team.present? %>
+          <a href="/opponent_teams/<%= @game.opponent_team_id %>">
+            <%= @game.opponent_team.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display opponent_team_id end -->
 

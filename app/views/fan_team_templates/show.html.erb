@@ -34,7 +34,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @fan_team.user_id %>
+        <% if @fan_team.user.present? %>
+          <a href="/users/<%= @fan_team.user_id %>">
+            <%= @fan_team.user.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display team_id start -->
       <dd>
-        <%= @fan_team.team_id %>
+        <% if @fan_team.team.present? %>
+          <a href="/teams/<%= @fan_team.team_id %>">
+            <%= @fan_team.team.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display team_id end -->
 

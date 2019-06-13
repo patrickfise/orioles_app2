@@ -58,13 +58,21 @@
 
         <!-- Display fan_team.user_id start -->
         <td>
-          <%= fan_team.user.created_at %>
+          <% if fan_team.user.present? %>
+            <a href="/users/<%= fan_team.user.id %>">
+              <%= fan_team.user.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display fan_team.user_id end -->
 
         <!-- Display fan_team.team_id start -->
         <td>
-          <%= fan_team.team.created_at %>
+          <% if fan_team.team.present? %>
+            <a href="/teams/<%= fan_team.team.id %>">
+              <%= fan_team.team.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display fan_team.team_id end -->
 
